@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.29;
+pragma solidity ^0.8.28;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "./ERC20.sol";
 
 contract MemeCoin is ERC20 {
     constructor() ERC20("Nigger Coin", "NIGGA") {

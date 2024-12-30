@@ -1,6 +1,12 @@
+require("ethers");
+require("dotenv").config();
+
+require("@nomicfoundation/hardhat-ethers");
+require("@nomicfoundation/hardhat-toolbox");
+
 async function main() {
     // Specify the address to deploy from
-    const deployerAddress = "dummy_address";
+    const deployerAddress = `${process.env.ADDRESS}`;
 
     // Get the wallet for the deployer
     const deployer = await ethers.getSigner(deployerAddress);
@@ -12,17 +18,8 @@ async function main() {
     // Deploy the contract (this will mint the initial supply to the deployer's address)
     console.log("Deploying MemeCoin...");
     const memeCoin = await MemeCoin.deploy(); // Deploy the contract, which mints 7.8 billion tokens
-    console.log("MemeCoin deployed to:", memeCoin.address);
+    console.log("MemeCoin deployed.");
 
-    // Check the total supply after deployment
-    const totalSupply = await memeCoin.totalSupply();
-    console.log("Total Supply:", ethers.utils.formatUnits(totalSupply, 18)); // Format the supply to 18 decimals
-
-    // Check the deployer's balance after minting
-    const deployerBalance = await memeCoin.balanceOf(deployer.address);
-    console.log("Deployer's balance:", ethers.utils.formatUnits(deployerBalance, 18));
-
-    // Optionally, you can log other details or interactions here
 }
 
 main()
