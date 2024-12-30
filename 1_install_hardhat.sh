@@ -1,8 +1,8 @@
-##### Install and create a Hardhat project 
+##### Install Hardhat
 
 npm install --save-dev hardhat
 npm install @nomicfoundation/hardhat-ethers
 npm install @nomicfoundation/hardhat-toolbox
 
 npx hardhat --version
-npx hardhat
+npm audit fix --force

@@ -1,0 +1,30 @@
+{
+  "name": "ecr-20-memecoin",
+  "version": "1.0.0",
+  "description": "This is a dummy repository for ECR-20 memecoin creation and deployment.",
+  "main": "deploy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chengmarc/ECR-20-memecoin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chengmarc/ECR-20-memecoin/issues"
+  },
+  "homepage": "https://github.com/chengmarc/ECR-20-memecoin#readme",
+  "dependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.1.0",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.4"
+  },
+  "devDependencies": {
+    "hardhat": "^2.22.17"
+  }
+}
